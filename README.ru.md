@@ -1,11 +1,29 @@
 # Thermal Harvester
 
+<p align="center"><img src="docs/images/logo.png" width="160" alt="Thermal Harvester logo"></p>
+
 **Неофициальный аддон для Thermal Expansion (Minecraft 1.12.2).** Не связан с Team CoFH и не одобрен ею.
 
 [English version](README.md)
 
 **Сборщик урожая** — машина в стиле Thermal Expansion. Собирает созревший урожай вокруг себя, сразу пересаживает
 культуры, ускоряет их рост удобрением и поддерживает пашню влажной. Поддерживаются жёрдочки IC2.
+
+## Скриншоты
+
+![Crop Harvester in the middle of its field](docs/images/cover.jpg)
+
+![Harvesting in progress: lamps and window active, crops replanted behind the scan](docs/images/harvesting.jpg)
+
+![GUI: fertilizer tooltip and working-area highlight modes](docs/images/gui_tooltip.png)
+
+![Four augments](docs/images/augments.png)
+
+![Front panel states](docs/images/panel_states.png)
+
+![Three working layers](docs/images/three_layers.png)
+
+![IC2 crop sticks with rubber reed](docs/images/ic2_crop_sticks.jpg)
 
 ## Зависимости
 
