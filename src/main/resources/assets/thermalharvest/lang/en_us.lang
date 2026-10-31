@@ -1,0 +1,73 @@
+# Thermal Harvester
+tile.thermalharvest.harvester.name=Crop Harvester
+
+info.thermalharvest.harvester=Harvests, replants and tends crops growing on farmland.
+info.thermalharvest.area=Harvest area
+info.thermalharvest.augmentSlots=Augment slots
+info.thermalharvest.scanSpeed=Scan speed
+info.thermalharvest.columnsPerSecond=col/s
+
+tab.thermalharvest.harvester.0=Harvests ripe crops from the farmland around it and replants them right away. Works in a square centered on the machine and covers three layers of plants: the machine's level, one block above and one below.
+tab.thermalharvest.harvester.1=Fertilizer in the left slot speeds up growth. It is only spent on crops that are still growing. Different fertilizers can be mixed: the stored strength becomes their average.
+tab.thermalharvest.harvester.2=Harvested items are kept in an internal buffer. While it is full, harvesting waits until items are taken out or pushed into an adjacent inventory.
+tab.thermalharvest.harvester.3=Upgrading the machine increases the area (from 3x3 to 11x11) and the scan speed.
+tab.thermalharvest.harvester.4=Sides: blue - fertilizer input, green - fertilizer only, orange - harvest output. With the Irrigation Module, blue also accepts water and purple accepts water only.
+tab.thermalharvest.harvester.5=IC2 crop sticks are supported too: harvesting, weeding, nutrients and watering.
+
+gui.thermalharvest.area=Harvest area
+gui.thermalharvest.scan=Scan speed: %s col/s
+gui.thermalharvest.irrigation.on=Irrigation: active
+gui.thermalharvest.irrigation.off=Irrigation: halted (no water, power or signal)
+gui.thermalharvest.nutrients=Fertilizer storage
+gui.thermalharvest.nutrients.empty=Put fertilizer into the slot to speed up growth
+gui.thermalharvest.fertilizer=Fertilizer
+gui.thermalharvest.fertilizerMix=Fertilizer blend
+gui.thermalharvest.plural=english
+gui.thermalharvest.cycle.1=cycle
+gui.thermalharvest.cycle.2=cycles
+gui.thermalharvest.cycle.5=cycles
+gui.thermalharvest.ofGrowth=of growth
+gui.thermalharvest.perItem=%s per item
+gui.thermalharvest.growthSpeed=Growth speed
+gui.thermalharvest.recycle=Fertilizer saved
+gui.thermalharvest.nextFertilizer=Next: %s (%s) - once there is room in storage
+item.thermalharvest.augment.harvesterCatalyst.short=Catalyst
+item.thermalharvest.augment.harvesterRecycler.short=Recycler
+gui.thermalharvest.zone.off=Area highlight: off (click - processed farmland)
+gui.thermalharvest.zone.farmland=Area highlight: processed farmland (click - whole working area)
+gui.thermalharvest.zone.full=Area highlight: whole working area (click - turn off)
+
+waila.thermalharvest.empty=Storage is empty
+waila.thermalharvest.water=Water
+
+item.thermalharvest.augment.harvesterRange.name=Harvest Area Extender
+item.thermalharvest.augment.harvesterIrrigation.name=Irrigation Module
+item.thermalharvest.augment.harvesterRecycler.name=Fertilizer Recycler
+item.thermalharvest.augment.harvesterCatalyst.name=Growth Catalyst
+
+info.thermalharvest.augment.harvesterRange.0=Crop Harvester: Harvest Area
+info.thermalharvest.augment.harvesterRange.a.0=Extends the harvest area by 1 block in every horizontal direction.
+info.thermalharvest.augment.harvesterRange.a.1=Stacks when multiple augments are installed.
+info.thermalharvest.augment.harvesterRange.b.0=Increases energy usage by 25%.
+info.thermalharvest.augment.harvesterRange.b.1=A full scan of the area takes longer.
+
+info.thermalharvest.augment.harvesterIrrigation.0=Crop Harvester: Irrigation
+info.thermalharvest.augment.harvesterIrrigation.a.0=Adds a 10,000 mB water tank.
+info.thermalharvest.augment.harvesterIrrigation.a.1=While the tank holds water, all farmland in the harvest area stays hydrated, like next to a water source.
+info.thermalharvest.augment.harvesterIrrigation.a.2=Keeps IC2 crop sticks supplied with water.
+info.thermalharvest.augment.harvesterIrrigation.b.0=Water is only spent on irrigated blocks: farmland and crop sticks.
+info.thermalharvest.augment.harvesterIrrigation.c.0=Only one may be installed.
+
+info.thermalharvest.augment.harvesterRecycler.0=Crop Harvester: Fertilizer Economy
+info.thermalharvest.augment.harvesterRecycler.a.0=Provides a 20% chance not to consume stored fertilizer.
+info.thermalharvest.augment.harvesterRecycler.a.1=Stacks when multiple augments are installed (up to 80%).
+
+info.thermalharvest.augment.harvesterCatalyst.0=Crop Harvester: Fertilizer Potency
+info.thermalharvest.augment.harvesterCatalyst.a.0=Raises the growth speed from fertilizer by one step (e.g. x2 -> x3).
+info.thermalharvest.augment.harvesterCatalyst.b.0=Fertilizer is consumed faster.
+info.thermalharvest.augment.harvesterCatalyst.c.0=Only one may be installed.
+
+jei.thermalharvest.fertilizer.title=Harvester Fertilizers
+jei.thermalharvest.fertilizer.growth=Growth speed: x%s
+jei.thermalharvest.fertilizer.catalyst=With Catalyst: x%s
+jei.thermalharvest.fertilizer.unused=Not used on this server

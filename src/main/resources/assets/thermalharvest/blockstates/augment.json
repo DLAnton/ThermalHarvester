@@ -1,0 +1,31 @@
+{
+	"forge_marker": 1,
+	"defaults": {
+		"model": "builtin/generated",
+		"transform": "forge:default-item"
+	},
+	"variants": {
+		"type": {
+			"harvesterrange": {
+				"textures": {
+					"layer0": "thermalharvest:items/augment/harvester_range"
+				}
+			},
+			"harvesterirrigation": {
+				"textures": {
+					"layer0": "thermalharvest:items/augment/harvester_irrigation"
+				}
+			},
+			"harvesterrecycler": {
+				"textures": {
+					"layer0": "thermalharvest:items/augment/harvester_recycler"
+				}
+			},
+			"harvestercatalyst": {
+				"textures": {
+					"layer0": "thermalharvest:items/augment/harvester_catalyst"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,73 @@
+# Thermal Harvester
+tile.thermalharvest.harvester.name=Сборщик урожая
+
+info.thermalharvest.harvester=Собирает, пересаживает и ухаживает за культурами на пашне.
+info.thermalharvest.area=Зона сбора
+info.thermalharvest.augmentSlots=Ячейки расширений
+info.thermalharvest.scanSpeed=Скорость обхода
+info.thermalharvest.columnsPerSecond=кол./с
+
+tab.thermalharvest.harvester.0=Собирает созревший урожай с пашни вокруг себя и сразу сажает культуры заново. Работает в квадрате с машиной в центре и захватывает три слоя растений: на уровне машины, на блок выше и на блок ниже.
+tab.thermalharvest.harvester.1=Удобрение в левой ячейке ускоряет рост. Оно тратится только на растущие культуры. Разные удобрения можно смешивать: сила запаса станет средней.
+tab.thermalharvest.harvester.2=Урожай копится во внутреннем хранилище. Когда оно заполнено, сбор ждёт, пока урожай заберут вручную или выведут в соседнее хранилище.
+tab.thermalharvest.harvester.3=Улучшение машины увеличивает зону (от 3x3 до 11x11) и скорость обхода.
+tab.thermalharvest.harvester.4=Стороны: синий — ввод удобрения, зелёный — только удобрение, оранжевый — вывод урожая. С модулем орошения синий принимает и воду, а фиолетовый — только воду.
+tab.thermalharvest.harvester.5=Жёрдочки IC2 тоже поддерживаются: сбор, прополка, подкормка и полив.
+
+gui.thermalharvest.area=Зона сбора
+gui.thermalharvest.scan=Скорость обхода: %s кол./с
+gui.thermalharvest.irrigation.on=Орошение: активно
+gui.thermalharvest.irrigation.off=Орошение: остановлено (нет воды, энергии или сигнала)
+gui.thermalharvest.nutrients=Запас удобрения
+gui.thermalharvest.nutrients.empty=Положите удобрение в ячейку, чтобы ускорить рост
+gui.thermalharvest.fertilizer=Удобрение
+gui.thermalharvest.fertilizerMix=Смесь удобрений
+gui.thermalharvest.plural=slavic
+gui.thermalharvest.cycle.1=цикл
+gui.thermalharvest.cycle.2=цикла
+gui.thermalharvest.cycle.5=циклов
+gui.thermalharvest.ofGrowth=роста
+gui.thermalharvest.perItem=%s за штуку
+gui.thermalharvest.growthSpeed=Скорость роста
+gui.thermalharvest.recycle=Экономия удобрения
+gui.thermalharvest.nextFertilizer=Следующее: %s (%s) — когда в запасе освободится место
+item.thermalharvest.augment.harvesterCatalyst.short=Катализатор
+item.thermalharvest.augment.harvesterRecycler.short=Рециркулятор
+gui.thermalharvest.zone.off=Подсветка зоны: выключена (нажмите — обрабатываемая пашня)
+gui.thermalharvest.zone.farmland=Подсветка зоны: обрабатываемая пашня (нажмите — вся рабочая зона)
+gui.thermalharvest.zone.full=Подсветка зоны: вся рабочая зона (нажмите — выключить)
+
+waila.thermalharvest.empty=Хранилище пусто
+waila.thermalharvest.water=Вода
+
+item.thermalharvest.augment.harvesterRange.name=Расширитель зоны сбора
+item.thermalharvest.augment.harvesterIrrigation.name=Модуль автоорошения
+item.thermalharvest.augment.harvesterRecycler.name=Рециркулятор удобрений
+item.thermalharvest.augment.harvesterCatalyst.name=Катализатор роста
+
+info.thermalharvest.augment.harvesterRange.0=Сборщик урожая: Зона сбора
+info.thermalharvest.augment.harvesterRange.a.0=Расширяет зону сбора на 1 блок в каждую сторону по горизонтали.
+info.thermalharvest.augment.harvesterRange.a.1=Эффект суммируется при установке нескольких расширений.
+info.thermalharvest.augment.harvesterRange.b.0=Увеличивает расход энергии на 25%.
+info.thermalharvest.augment.harvesterRange.b.1=Полный обход зоны занимает больше времени.
+
+info.thermalharvest.augment.harvesterIrrigation.0=Сборщик урожая: Орошение
+info.thermalharvest.augment.harvesterIrrigation.a.0=Добавляет бак для воды на 10 000 mB.
+info.thermalharvest.augment.harvesterIrrigation.a.1=Пока в баке есть вода, вся пашня в зоне сбора остаётся влажной, как рядом с источником воды.
+info.thermalharvest.augment.harvesterIrrigation.a.2=Поддерживает запас воды в жёрдочках IC2.
+info.thermalharvest.augment.harvesterIrrigation.b.0=Расходует воду только на орошаемые блоки: пашню и жёрдочки.
+info.thermalharvest.augment.harvesterIrrigation.c.0=Устанавливается не более одного.
+
+info.thermalharvest.augment.harvesterRecycler.0=Сборщик урожая: Экономия удобрения
+info.thermalharvest.augment.harvesterRecycler.a.0=Даёт шанс 20% не израсходовать запас удобрения.
+info.thermalharvest.augment.harvesterRecycler.a.1=Эффект суммируется при установке нескольких расширений (не более 80%).
+
+info.thermalharvest.augment.harvesterCatalyst.0=Сборщик урожая: Усиление удобрения
+info.thermalharvest.augment.harvesterCatalyst.a.0=Повышает скорость роста от удобрения на одну ступень (например, x2 -> x3).
+info.thermalharvest.augment.harvesterCatalyst.b.0=Удобрение расходуется быстрее.
+info.thermalharvest.augment.harvesterCatalyst.c.0=Устанавливается не более одного.
+
+jei.thermalharvest.fertilizer.title=Удобрения Сборщика
+jei.thermalharvest.fertilizer.growth=Скорость роста: x%s
+jei.thermalharvest.fertilizer.catalyst=С Катализатором: x%s
+jei.thermalharvest.fertilizer.unused=Не используется на этом сервере
