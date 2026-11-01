@@ -31,14 +31,14 @@ speeds up their growth with fertilizer and keeps the farmland watered. IC2 crop 
 |---|---|
 | Minecraft Forge 1.12.2 | required |
 | CoFH Core, Thermal Foundation, Thermal Expansion | required |
-| CodeChickenLib | required |
+| CodeChickenLib | required — on Cleanroom, CodeChicken Lib CRE works too |
 | IndustrialCraft 2 | optional — crop stick support |
 | Forestry | optional — its fertilizers |
 | JEI / HEI | optional — fertilizer page |
 | Hwyla | optional — tooltip with storage, fertilizer and water |
 
 Tested with Forge 14.23.5.2864, CoFH Core 4.6.6, Thermal Foundation 2.6.7, Thermal Expansion 5.5.7,
-CodeChickenLib 3.3.8, IndustrialCraft 2 2.8.222-ex112, Forestry 5.8.2, HEI 4.36.1 and Hwyla 1.8.26.
+CodeChicken Lib CRE 3.3.8, IndustrialCraft 2 2.8.222-ex112, Forestry 5.8.2, HEI 4.36.1 and Hwyla 1.8.26.
 
 ## How it works
 

@@ -31,14 +31,14 @@
 |---|---|
 | Minecraft Forge 1.12.2 | обязательно |
 | CoFH Core, Thermal Foundation, Thermal Expansion | обязательно |
-| CodeChickenLib | обязательно |
+| CodeChickenLib | обязательно — на Cleanroom подходит CodeChicken Lib CRE |
 | IndustrialCraft 2 | по желанию — жёрдочки |
 | Forestry | по желанию — его удобрения |
 | JEI / HEI | по желанию — страница удобрений |
 | Hwyla | по желанию — подсказка с урожаем, удобрением и водой |
 
 Проверено с Forge 14.23.5.2864, CoFH Core 4.6.6, Thermal Foundation 2.6.7, Thermal Expansion 5.5.7,
-CodeChickenLib 3.3.8, IndustrialCraft 2 2.8.222-ex112, Forestry 5.8.2, HEI 4.36.1 и Hwyla 1.8.26.
+CodeChicken Lib CRE 3.3.8, IndustrialCraft 2 2.8.222-ex112, Forestry 5.8.2, HEI 4.36.1 и Hwyla 1.8.26.
 
 ## Как работает
 
