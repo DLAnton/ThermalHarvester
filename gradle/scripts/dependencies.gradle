@@ -30,15 +30,21 @@ repositories {
 
 // ---------------------------------------------------------------------------------------------
 // Thermal Harvester: the CoFH / Thermal / IC2 jars are taken straight from the modpack's
-// mods folder (property `mods_dir` in gradle.properties) and deobfuscated by RFG.
+// mods folder (property `mods_dir`) and deobfuscated by RFG. A personal path can be put into
+// local.properties (not committed); otherwise the value from gradle.properties is used.
 // CodeChicken Lib is taken from CurseMaven: the modpack ships the Cleanroom-only "CRE" build
 // (Java 25 bytecode), which a Java 8 toolchain cannot read. The API used here is identical.
 // ---------------------------------------------------------------------------------------------
-def modsDir = file(propertyString('mods_dir'))
+def localProps = new Properties()
+def localPropsFile = file('local.properties')
+if (localPropsFile.exists()) {
+    localPropsFile.withReader('UTF-8') { localProps.load(it) }
+}
+def modsDir = file(localProps.getProperty('mods_dir') ?: propertyString('mods_dir'))
 def modJar = { String pattern ->
     def tree = fileTree(dir: modsDir, include: pattern)
     if (tree.isEmpty()) {
-        throw new GradleException("Thermal Harvester: no jar matching '${pattern}' in ${modsDir}. Check mods_dir in gradle.properties")
+        throw new GradleException("Thermal Harvester: no jar matching '${pattern}' in ${modsDir}. Set mods_dir in local.properties or gradle.properties")
     }
     return tree
 }

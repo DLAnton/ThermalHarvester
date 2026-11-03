@@ -27,3 +27,16 @@ run
 # local test logs
 *_log.txt
 logs
+
+# local settings and third-party jars
+local.properties
+libs
+
+# Windows / OneDrive
+desktop.ini
+Thumbs.db
+
+# python, vscode, logs
+__pycache__
+.vscode
+*.log

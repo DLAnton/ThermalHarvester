@@ -134,6 +134,12 @@ gradlew build
 
 Requires JDK 17+. Output: `build/libs/thermalharvest-1.0.0.jar`.
 
+The build compiles against the jars of Thermal Expansion, Thermal Foundation, CoFH Core, CoFH World, Redstone Flux, IC2, Hwyla and HEI. Copy them into `libs/`, or create `local.properties` with the path to your modpack's mods folder:
+
+```
+mods_dir = C:/path/to/instance/mods
+```
+
 ## License
 
 The code of this addon is released under the [MIT License](LICENSE). All textures are original.
