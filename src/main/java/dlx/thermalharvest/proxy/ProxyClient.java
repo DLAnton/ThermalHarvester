@@ -6,6 +6,7 @@ import dlx.thermalharvest.init.THContent;
 import dlx.thermalharvest.network.ConfigSync;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.fml.common.network.FMLNetworkEvent;
+import dlx.thermalharvest.gui.config.THConfigGui;
 import dlx.thermalharvest.init.THTextures;
 import dlx.thermalharvest.render.ZoneRenderer;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -24,6 +25,7 @@ public class ProxyClient extends Proxy {
         MinecraftForge.EVENT_BUS.register(THTextures.INSTANCE);
         MinecraftForge.EVENT_BUS.register(ZoneRenderer.INSTANCE);
         MinecraftForge.EVENT_BUS.register(this);
+        MinecraftForge.EVENT_BUS.register(new THConfigGui.Events());
     }
 
     /** Выход с сервера: возвращаемся к значениям локального конфига (сервер мог прислать свои). */

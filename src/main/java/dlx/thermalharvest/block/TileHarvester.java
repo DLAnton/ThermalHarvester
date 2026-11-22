@@ -983,6 +983,9 @@ public class TileHarvester extends TilePowered implements ITickable {
         if (stack.isEmpty()) {
             return;
         }
+        if (nutrients >= THConfig.fertilizerCapacity) {
+            return; // запас полон: ни одно удобрение не поместится, не разбираем предмет каждый тик
+        }
         THConfig.Fertilizer f = THConfig.getFertilizer(stack);
         if (f == null) {
             return;
@@ -1501,6 +1504,11 @@ public class TileHarvester extends TilePowered implements ITickable {
         markChunkDirty();
         sendTilePacket(Side.CLIENT);
         return true;
+    }
+
+    /** Есть ли у стороны видимая накладка конфигурации (у «не назначено» накладка TE полностью прозрачная). */
+    public boolean hasSideOverlay(int side) {
+        return side < 6 && sideConfig.sideTypes[sideCache[side]] != SideConfig.NONE;
     }
 
     /** Накладки лицевой панели для текущего состояния (клиент). */

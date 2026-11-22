@@ -52,7 +52,7 @@ CodeChicken Lib CRE). Полный список — на странице [Со�
 gradlew build
 ```
 
-Нужен JDK 17+. Готовый мод: `build/libs/thermalharvest-1.0.0.jar`.
+Нужен JDK 17+. Готовый мод: `build/libs/thermalharvest-1.1.0.jar`.
 
 Для сборки нужны jar-файлы Thermal Expansion, Thermal Foundation, CoFH Core, CoFH World, Redstone Flux, IC2, Hwyla и HEI. Положите их в папку `libs/` или создайте файл `local.properties` с путём к папке mods вашей сборки:
 

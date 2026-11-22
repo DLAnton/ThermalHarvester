@@ -95,11 +95,15 @@ public final class ZoneRenderer {
         }
         refreshTimer = 0;
         int dim = mc.world.provider.getDimension();
+        Entity view = mc.getRenderViewEntity();
         Iterator<Map.Entry<Key, Entry>> it = SHOWN.entrySet().iterator();
         while (it.hasNext()) {
             Map.Entry<Key, Entry> e = it.next();
             if (e.getKey().dim != dim) {
                 continue;
+            }
+            if (view != null && e.getKey().pos.distanceSqToCenter(view.posX, view.posY, view.posZ) > MAX_DISTANCE_SQ) {
+                continue; // далеко — всё равно не рисуется, зону не перебираем
             }
             TileEntity te = mc.world.getTileEntity(e.getKey().pos);
             if (!(te instanceof TileHarvester)) {

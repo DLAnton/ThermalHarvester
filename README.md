@@ -52,7 +52,7 @@ CodeChicken Lib CRE works too). The full list is on the [Compatibility](https://
 gradlew build
 ```
 
-Requires JDK 17+. Output: `build/libs/thermalharvest-1.0.0.jar`.
+Requires JDK 17+. Output: `build/libs/thermalharvest-1.1.0.jar`.
 
 The build compiles against the jars of Thermal Expansion, Thermal Foundation, CoFH Core, CoFH World, Redstone Flux, IC2, Hwyla and HEI. Copy them into `libs/`, or create `local.properties` with the path to your modpack's mods folder:
 

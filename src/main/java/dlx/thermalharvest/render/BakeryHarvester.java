@@ -66,8 +66,9 @@ public class BakeryHarvester extends CubeBakeryBase {
             int level = BlockHarvester.itemBlock.getLevel(stack);
             IWorldBlockTextureProvider provider = (IWorldBlockTextureProvider) Block.getBlockFromItem(stack.getItem());
             renderFace(ccrs, face, provider.getTexture(face, stack), -1);
-            if (TEProps.renderMachineOverlay) {
-                renderFaceOverlay(ccrs, face, levelOverlay(creative, level), -1);
+            TextureAtlasSprite overlay = levelOverlay(creative, level);
+            if (TEProps.renderMachineOverlay && overlay != null) {
+                renderFaceOverlay(ccrs, face, overlay, -1);
             }
             buffer.finishDrawing();
             quads.addAll(buffer.bake());
@@ -92,16 +93,23 @@ public class BakeryHarvester extends CubeBakeryBase {
             ccrs.reset();
             ccrs.bind(buffer);
 
-            renderFace(ccrs, face, provider.getTexture(face, state, layer, world, tile.getPos()), -1);
-            if (layer == BlockRenderLayer.CUTOUT) {
+            if (layer != BlockRenderLayer.CUTOUT) {
+                renderFace(ccrs, face, provider.getTexture(face, state, layer, world, tile.getPos()), -1);
+            } else {
+                // Накладки — только там, где они видны: сторона без назначения (полностью прозрачная накладка TE)
+                // и базовый уровень (рамки нет) лишних граней не получают.
+                if (tile.hasSideOverlay(face.ordinal())) {
+                    renderFace(ccrs, face, provider.getTexture(face, state, layer, world, tile.getPos()), -1);
+                }
                 if (face.ordinal() == tile.getFacing()) {
                     // лицевая панель: лампы, окно и прорезь — независимые накладки поверх корпуса
                     for (TextureAtlasSprite sprite : tile.getFaceOverlays()) {
                         renderFace(ccrs, face, sprite, -1);
                     }
                 }
-                if (TEProps.renderMachineOverlay) {
-                    renderFace(ccrs, face, levelOverlay(tile.isCreative, tile.getLevel()), -1);
+                TextureAtlasSprite overlay = levelOverlay(tile.isCreative, tile.getLevel());
+                if (TEProps.renderMachineOverlay && overlay != null) {
+                    renderFace(ccrs, face, overlay, -1);
                 }
             }
             buffer.finishDrawing();

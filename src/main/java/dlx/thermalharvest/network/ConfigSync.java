@@ -19,8 +19,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Синхронизация серверных настроек с клиентом при входе игрока: список удобрений и значения,
- * от которых зависит то, что клиент показывает (подсказки, шкалы, зона, HEI).
+ * Синхронизация серверных настроек с клиентом при входе игрока: список удобрений
+ * (от него зависят подсказки, шкала запаса, ячейка удобрения и страница HEI).
+ * Остальные значения, которые показывает клиент, с 22.11.2026 постоянные и одинаковы везде.
  * Без этого на сервере с изменённым конфигом клиент показывал бы свои значения и не пускал бы в ячейку
  * удобрения, которых нет в его локальном списке. При выходе с сервера клиент возвращается к своему конфигу.
  */
@@ -38,6 +39,11 @@ public final class ConfigSync {
         NETWORK.registerMessage(Handler.class, Message.class, 0, Side.CLIENT);
     }
 
+    /** Разослать текущие серверные настройки всем игрокам (после правки в окне «Настройки» у хоста LAN). Вызывать в потоке сервера. */
+    public static void sendToAll() {
+        NETWORK.sendToAll(Message.fromConfig());
+    }
+
     @SubscribeEvent
     public void onPlayerLogin(PlayerEvent.PlayerLoggedInEvent event) {
         if (event.player instanceof EntityPlayerMP) {
@@ -48,44 +54,17 @@ public final class ConfigSync {
     public static final class Message implements IMessage {
 
         private final Map<String, THConfig.Fertilizer> fertilizers = new HashMap<>();
-        private int capacity;
-        private int recyclerPerAugment;
-        private int recyclerMax;
-        private int catalystBonus;
-        private int baseRadius;
-        private int maxRadius;
-        private int tankCapacity;
-        private int[] columns = new int[0];
 
         public Message() {}
 
         static Message fromConfig() {
             Message m = new Message();
             m.fertilizers.putAll(THConfig.FERTILIZERS);
-            m.capacity = THConfig.fertilizerCapacity;
-            m.recyclerPerAugment = THConfig.recyclerChancePerAugment;
-            m.recyclerMax = THConfig.recyclerChanceMax;
-            m.catalystBonus = THConfig.catalystBonus;
-            m.baseRadius = THConfig.baseRadius;
-            m.maxRadius = THConfig.maxRadius;
-            m.tankCapacity = THConfig.tankCapacity;
-            m.columns = THConfig.columnsPerSecond.clone();
             return m;
         }
 
         @Override
         public void toBytes(ByteBuf buf) {
-            buf.writeInt(capacity);
-            buf.writeInt(recyclerPerAugment);
-            buf.writeInt(recyclerMax);
-            buf.writeInt(catalystBonus);
-            buf.writeInt(baseRadius);
-            buf.writeInt(maxRadius);
-            buf.writeInt(tankCapacity);
-            buf.writeByte(columns.length);
-            for (int c : columns) {
-                buf.writeInt(c);
-            }
             buf.writeInt(fertilizers.size());
             for (Map.Entry<String, THConfig.Fertilizer> e : fertilizers.entrySet()) {
                 ByteBufUtils.writeUTF8String(buf, e.getKey());
@@ -96,17 +75,6 @@ public final class ConfigSync {
 
         @Override
         public void fromBytes(ByteBuf buf) {
-            capacity = buf.readInt();
-            recyclerPerAugment = buf.readInt();
-            recyclerMax = buf.readInt();
-            catalystBonus = buf.readInt();
-            baseRadius = buf.readInt();
-            maxRadius = buf.readInt();
-            tankCapacity = buf.readInt();
-            columns = new int[buf.readUnsignedByte()];
-            for (int i = 0; i < columns.length; i++) {
-                columns[i] = buf.readInt();
-            }
             int n = buf.readInt();
             for (int i = 0; i < n; i++) {
                 String key = ByteBufUtils.readUTF8String(buf);
@@ -115,18 +83,7 @@ public final class ConfigSync {
         }
 
         void apply() {
-            THConfig.FERTILIZERS.clear();
-            THConfig.FERTILIZERS.putAll(fertilizers);
-            THConfig.fertilizerCapacity = capacity;
-            THConfig.recyclerChancePerAugment = recyclerPerAugment;
-            THConfig.recyclerChanceMax = recyclerMax;
-            THConfig.catalystBonus = catalystBonus;
-            THConfig.baseRadius = baseRadius;
-            THConfig.maxRadius = maxRadius;
-            THConfig.tankCapacity = tankCapacity;
-            if (columns.length == THConfig.columnsPerSecond.length) {
-                THConfig.columnsPerSecond = columns;
-            }
+            THConfig.FERTILIZERS = new HashMap<>(fertilizers);
             remoteValues = true;
             THConfig.fireChanged();
         }

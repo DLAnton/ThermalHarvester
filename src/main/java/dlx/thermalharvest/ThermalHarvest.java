@@ -24,12 +24,12 @@ import java.io.File;
  * RF, уровни через наборы улучшения, расширения (аугменты), авто-вывод, красный сигнал, защита владельцем.
  */
 @Mod(modid = ThermalHarvest.MOD_ID, name = ThermalHarvest.MOD_NAME, version = ThermalHarvest.VERSION,
-        dependencies = ThermalHarvest.DEPENDENCIES)
+        dependencies = ThermalHarvest.DEPENDENCIES, guiFactory = "dlx.thermalharvest.gui.config.THGuiFactory")
 public class ThermalHarvest {
 
     public static final String MOD_ID = "thermalharvest";
     public static final String MOD_NAME = "Thermal Harvester";
-    public static final String VERSION = "1.0.0";
+    public static final String VERSION = "1.1.0";
     public static final String DEPENDENCIES = "required-after:codechickenlib;required-after:cofhcore;"
             + "required-after:thermalfoundation;required-after:thermalexpansion;after:ic2;after:waila;after:forestry;after:jei";
 

@@ -71,3 +71,34 @@ jei.thermalharvest.fertilizer.title=Удобрения Сборщика
 jei.thermalharvest.fertilizer.growth=Скорость роста: x%s
 jei.thermalharvest.fertilizer.catalyst=С Катализатором: x%s
 jei.thermalharvest.fertilizer.unused=Не используется на этом сервере
+
+# Окно «Настройки» (меню «Моды»)
+config.thermalharvest.title=Настройки Thermal Harvester
+config.thermalharvest.client=Подсветка зоны
+config.thermalharvest.client.tooltip=Настройки только для вашего клиента: подсветка зоны сбора.
+config.thermalharvest.client.ZoneHighlightOpacity=Непрозрачность подсветки
+config.thermalharvest.client.ZoneHighlightOpacity.tooltip=Непрозрачность подсветки зоны сбора (кнопка в окне Сборщика).
+config.thermalharvest.client.ZoneHighlightAnimated=Анимация подсветки
+config.thermalharvest.client.ZoneHighlightAnimated.tooltip=Медленно сдвигать полосы подсветки зоны.
+config.thermalharvest.energy=Энергия
+config.thermalharvest.energy.EnergyPerCheck=RF за проверку колонки
+config.thermalharvest.energy.EnergyPerCheck.tooltip=Сколько RF тратится на проверку одной колонки (по 3 блока в высоту).
+config.thermalharvest.energy.EnergyPerHarvest=RF за сбор
+config.thermalharvest.energy.EnergyPerHarvest.tooltip=Сколько RF тратится на сбор одной культуры или прополку одного сорняка.
+config.thermalharvest.fertilizer=Удобрения
+config.thermalharvest.fertilizer.IC2Nutrients=Подкармливать жёрдочки IC2
+config.thermalharvest.fertilizer.IC2Nutrients.tooltip=Пополнять питательные вещества жёрдочек IC2 из запаса удобрения.
+config.thermalharvest.fertilizer.Fertilizers=Удобрения
+config.thermalharvest.fertilizer.Fertilizers.tooltip=Принимаемые удобрения: мод:предмет:мета=множитель,единицы. Множитель — скорость роста (2 = вдвое быстрее, от 2 до 8), единицы — сколько запаса даёт один предмет (от 1 до 1024). На каждый лишний цикл роста тратится одна единица.
+config.thermalharvest.harvesting=Сбор
+config.thermalharvest.harvesting.BreakParticles=Частицы при сборе
+config.thermalharvest.harvesting.BreakParticles.tooltip=Показывать частицы и звук разрушения при сборе.
+config.thermalharvest.harvesting.NetherWartOnSoulSand=Адский нарост на песке душ
+config.thermalharvest.harvesting.NetherWartOnSoulSand.tooltip=Собирать и пересаживать адский нарост, посаженный на песок душ (вне жёрдочек).
+config.thermalharvest.harvesting.RemoveIC2Weeds=Пропалывать сорняки IC2
+config.thermalharvest.harvesting.RemoveIC2Weeds.tooltip=Убирать сорняки IC2 с жёрдочек.
+config.thermalharvest.harvesting.Blacklist=Чёрный список
+config.thermalharvest.harvesting.Blacklist.tooltip=Блоки, которые Сборщик никогда не трогает, по имени в реестре, например minecraft:wheat.
+config.thermalharvest.irrigation=Орошение
+config.thermalharvest.irrigation.IC2HydrationTarget=Запас воды жёрдочек IC2
+config.thermalharvest.irrigation.IC2HydrationTarget.tooltip=До какого уровня поддерживать запас воды жёрдочек IC2, пока работает орошение (0 — отключено).

@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.1.0
+
+* Mod list page: Crop Harvester icon and logo, website link to CurseForge.
+* In-game settings: the "Config" button in the mod list opens the settings; changes apply right away,
+  also in a running world (on a server, the server's fertilizer list is used).
+* Simpler, safer config: only non-critical settings remain, with strict ranges (energy per check and per harvest,
+  harvesting options, IC2 nutrients and hydration, fertilizer list, zone highlight). Area, scan speed, base power,
+  storage and tank sizes, augment chances and bonuses are now fixed. Old entries are removed from the config file
+  automatically. Fertilizer values outside 2–8 (strength) and 1–1024 (units) are clamped with a warning in the log.
+* Only the fertilizer list is synced from the server. Client and server must both run 1.1.0.
+* Performance: transparent side overlays are no longer rendered, the area highlight skips far machines,
+  fertilizer is not pulled in when the storage is full.
+
 ## 1.0.0 — first public release
 
 * Crop Harvester: a Thermal Expansion–style machine that harvests and replants crops on farmland in three layers

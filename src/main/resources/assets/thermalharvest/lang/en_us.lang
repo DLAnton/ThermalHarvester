@@ -71,3 +71,23 @@ jei.thermalharvest.fertilizer.title=Harvester Fertilizers
 jei.thermalharvest.fertilizer.growth=Growth speed: x%s
 jei.thermalharvest.fertilizer.catalyst=With Catalyst: x%s
 jei.thermalharvest.fertilizer.unused=Not used on this server
+
+# Settings screen (Mods menu). Tooltips come from the comments in the config file.
+config.thermalharvest.title=Thermal Harvester Settings
+config.thermalharvest.client=Area Highlight
+config.thermalharvest.client.tooltip=Client-only settings of the harvest area highlight.
+config.thermalharvest.client.ZoneHighlightOpacity=Highlight Opacity
+config.thermalharvest.client.ZoneHighlightAnimated=Animated Highlight
+config.thermalharvest.energy=Energy
+config.thermalharvest.energy.EnergyPerCheck=RF per Column Check
+config.thermalharvest.energy.EnergyPerHarvest=RF per Harvest
+config.thermalharvest.fertilizer=Fertilizer
+config.thermalharvest.fertilizer.IC2Nutrients=Feed IC2 Crop Sticks
+config.thermalharvest.fertilizer.Fertilizers=Fertilizers
+config.thermalharvest.harvesting=Harvesting
+config.thermalharvest.harvesting.BreakParticles=Break Particles
+config.thermalharvest.harvesting.NetherWartOnSoulSand=Nether Wart on Soul Sand
+config.thermalharvest.harvesting.RemoveIC2Weeds=Remove IC2 Weeds
+config.thermalharvest.harvesting.Blacklist=Blacklist
+config.thermalharvest.irrigation=Irrigation
+config.thermalharvest.irrigation.IC2HydrationTarget=IC2 Hydration Target
